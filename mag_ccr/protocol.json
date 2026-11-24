@@ -1,0 +1,260 @@
+{
+  "root_seed": 20261101,
+  "local_predictor": {
+    "hidden_dim": 256,
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 512,
+    "evaluation_batch_size": 1024,
+    "maximum_epochs": 50,
+    "patience": 8,
+    "scale_floor": 1e-06
+  },
+  "public_num_classes": {
+    "Grocery": 20,
+    "Toys": 18,
+    "Movies": 20,
+    "RedditS": 20
+  },
+  "analysis_datasets": [
+    "Grocery",
+    "RedditS"
+  ],
+  "lp_negative_candidates": 1000,
+  "presets": {
+    "nc": {
+      "architecture": {
+        "hidden_dim": 256,
+        "graph_dim": 512,
+        "dropout": 0.1
+      },
+      "pretraining_epochs": 300,
+      "mask_ratio": 0.7,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "huber_delta": 1.0,
+      "task_coefficients": [
+        0.5,
+        0.5
+      ],
+      "readout": {
+        "learning_rate": 0.0003,
+        "weight_decay": 0.0001,
+        "epochs": 300,
+        "patience": 40
+      }
+    },
+    "lp": {
+      "architecture": {
+        "hidden_dim": 256,
+        "graph_dim": 256,
+        "dropout": 0.1
+      },
+      "pretraining_epochs": 300,
+      "mask_ratio": 0.7,
+      "learning_rate": 0.001,
+      "weight_decay": 0.0001,
+      "huber_delta": 1.0,
+      "task_coefficients": [
+        0.5,
+        0.5
+      ],
+      "readout": {
+        "hidden_dim": 128,
+        "learning_rate": 0.001,
+        "weight_decay": 0.0001,
+        "epochs": 160,
+        "batch_size": 1024
+      },
+      "evaluation_relation_batch_size": 4
+    }
+  },
+  "seeds": {
+    "nc": {
+      "Grocery": [
+        {
+          "encoder_seed": 1002839433,
+          "mask_seed": 735575180,
+          "head_seed": 127576423
+        },
+        {
+          "encoder_seed": 814101108,
+          "mask_seed": 2872418494,
+          "head_seed": 1461975220
+        },
+        {
+          "encoder_seed": 611100922,
+          "mask_seed": 405336795,
+          "head_seed": 1842341331
+        },
+        {
+          "encoder_seed": 304439472,
+          "mask_seed": 2644676444,
+          "head_seed": 2308213811
+        },
+        {
+          "encoder_seed": 4190761254,
+          "mask_seed": 1131179506,
+          "head_seed": 415506896
+        }
+      ],
+      "Toys": [
+        {
+          "encoder_seed": 4206832663,
+          "mask_seed": 3987002330,
+          "head_seed": 1198661720
+        },
+        {
+          "encoder_seed": 3428210908,
+          "mask_seed": 3673359001,
+          "head_seed": 1037144028
+        },
+        {
+          "encoder_seed": 2454378962,
+          "mask_seed": 2624793625,
+          "head_seed": 4214393796
+        },
+        {
+          "encoder_seed": 481437815,
+          "mask_seed": 3217488533,
+          "head_seed": 1728168344
+        },
+        {
+          "encoder_seed": 1225022887,
+          "mask_seed": 2859898026,
+          "head_seed": 2661566221
+        }
+      ],
+      "Movies": [
+        {
+          "encoder_seed": 2786896659,
+          "mask_seed": 3599748899,
+          "head_seed": 315996391
+        },
+        {
+          "encoder_seed": 1467545376,
+          "mask_seed": 2330894337,
+          "head_seed": 224760284
+        },
+        {
+          "encoder_seed": 3527811728,
+          "mask_seed": 2078709138,
+          "head_seed": 4293575050
+        },
+        {
+          "encoder_seed": 1272369625,
+          "mask_seed": 1157221769,
+          "head_seed": 3636106664
+        },
+        {
+          "encoder_seed": 4078607012,
+          "mask_seed": 1670293250,
+          "head_seed": 3750914665
+        }
+      ],
+      "RedditS": [
+        {
+          "encoder_seed": 806821523,
+          "mask_seed": 753268943,
+          "head_seed": 3206668841
+        },
+        {
+          "encoder_seed": 3689131091,
+          "mask_seed": 3712767801,
+          "head_seed": 2457939777
+        },
+        {
+          "encoder_seed": 2710825697,
+          "mask_seed": 446668124,
+          "head_seed": 4289420860
+        },
+        {
+          "encoder_seed": 9826863,
+          "mask_seed": 1080394363,
+          "head_seed": 3094640538
+        },
+        {
+          "encoder_seed": 1044254510,
+          "mask_seed": 3908218202,
+          "head_seed": 1276713018
+        }
+      ]
+    },
+    "lp": {
+      "Grocery": [
+        {
+          "encoder_seed": 4096018051,
+          "mask_seed": 1823855809,
+          "head_seed": 1517397681,
+          "negative_seed": 555566838,
+          "order_seed": 2418265610
+        },
+        {
+          "encoder_seed": 2838503729,
+          "mask_seed": 2261451991,
+          "head_seed": 3474953105,
+          "negative_seed": 2210645706,
+          "order_seed": 207035360
+        },
+        {
+          "encoder_seed": 3762219204,
+          "mask_seed": 73324165,
+          "head_seed": 2768505074,
+          "negative_seed": 4051645126,
+          "order_seed": 1594971340
+        },
+        {
+          "encoder_seed": 3273712747,
+          "mask_seed": 2370516995,
+          "head_seed": 3794672123,
+          "negative_seed": 59490777,
+          "order_seed": 2439999578
+        },
+        {
+          "encoder_seed": 1925154770,
+          "mask_seed": 753748882,
+          "head_seed": 4007287533,
+          "negative_seed": 1475918966,
+          "order_seed": 3766872608
+        }
+      ],
+      "Toys": [
+        {
+          "encoder_seed": 3855628564,
+          "mask_seed": 2116928640,
+          "head_seed": 3710408892,
+          "negative_seed": 423023200,
+          "order_seed": 904468777
+        },
+        {
+          "encoder_seed": 251793478,
+          "mask_seed": 2095435242,
+          "head_seed": 4002458598,
+          "negative_seed": 4235289075,
+          "order_seed": 245562897
+        },
+        {
+          "encoder_seed": 636110653,
+          "mask_seed": 2134415079,
+          "head_seed": 2342145652,
+          "negative_seed": 3623686694,
+          "order_seed": 76303677
+        },
+        {
+          "encoder_seed": 808109731,
+          "mask_seed": 3018312796,
+          "head_seed": 1754044856,
+          "negative_seed": 3089456126,
+          "order_seed": 1034968518
+        },
+        {
+          "encoder_seed": 1868273607,
+          "mask_seed": 2924210799,
+          "head_seed": 1663675558,
+          "negative_seed": 3355156455,
+          "order_seed": 4006092166
+        }
+      ]
+    }
+  }
+}
